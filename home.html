@@ -1,14 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
-    <link rel="stylesheet" href="index.css">
-    <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
+    <link rel="stylesheet" href="bootstrap.css" />
+    <title>A/B Testing</title>
+    <link rel="stylesheet" href="index.css" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
   <body>
-    <!-- TODO: put your HTML code here! -->
+    <main role="main" class="main">
+      <h1>A/B Testing</h1>
+      <h2>Objective</h2>
+      <p>
+        Perform an A/B test and statistical analysis on website that sells cacti
+      </p>
+      <h2>Deploying website</h2>
+      <p>
+        The website is deployed
+        <a href="https://young-plains-52801.herokuapp.com">here.</a> One version
+        displays button and item information on the side while the other
+        displays information on the bottom:
+      </p>
+      <h3>Version A</h3>
+      <p>Buttons are below images.</p>
+      <img src="images/A.png" class="img-fluid" />
+      <h3>Version B</h3>
+      <p>Buttons are beside images.</p>
+      <img src="images/B.png" class="img-fluid" />
+      <h2>Hypotheses</h2>
+      <h3>Time to completion</h3>
+      <ul>
+        <li>
+          <b>Null hypothesis: </b> the button layout does not effect time to
+          completion
+        </li>
+
+        <li>
+          <b>Alternate hypothesis: </b>time to completion is lower when the
+          buttons are on the bottom/li>
+        </li>
+      </ul>
+
+      <h3>Return rate</h3>
+      <ul>
+        <li>
+          <b>Null hypothesis: </b>
+          the button layout does not effect the times a user visits the cart
+        </li>
+        <li>
+          <b>Alternate hypothesis: </b> when buttons are beside the image, users
+          will visit the cart more often
+        </li>
+      </ul>
+
+      <h2>Data collection</h2>
+      <p>
+        28 participants were sent the link above, which randomly assigns a user
+        to either version A or version B. The participants were prompted to fill
+        their cart with at least $150 of cacti/succulents. Their button clicks
+        and page loads were recorded into a log file, where return rate and time
+        to completion.
+      </p>
+      <p>
+        Participants were counted to return if they had ever visited the cart
+        and then the home page. Return rate was calculated to be the time, in
+        milliseconds, between the user's inital page load and their final
+        interaction with the website, whether that be a page load or button
+        click.
+      </p>
+      <span class="summary">
+        <img class="chart" src="images/return.png" />
+        <img class="chart" src="images/time.png" />
+      </span>
+
+      <h2>Analysis</h2>
+      <ul>
+        <li>Time to completion rate p value: -0.441</li>
+        <li>Time to completion t score: 0.367</li>
+        <li>Return rate p value: 1.69</li>
+        <li>Return rate chi squared value: 0.192</li>
+      </ul>
+      <p>
+        The p-scores of both datasets indicate that no conclusion can be
+        reached. Based on the data, we fail to reject the null hypothesis.
+      </p>
+
+      <h2>Infographic</h2>
+      <img class="img-fluid" src="images/infographic.png" />
+      <h2>Takeaways</h2>
+      <ul>
+        <li>User interaction is varied and difficult to quantify</li>
+        <li>
+          The environment wasn't natural, so users had no motivation to click on
+          the buttons because they weren't spending their own money
+        </li>
+        <li>
+          A/B is a useful tool to gather information about users, which should
+          inform design decisions
+        </li>
+      </ul>
+    </main>
   </body>
 </html>

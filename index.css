@@ -1,1 +1,25 @@
 /* Put your style information here! */
+.main {
+  max-width: 650px;
+  margin: auto;
+  padding: 10px;
+}
+
+h2 {
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 18pt;
+  margin-top: 1rem;
+}
+
+.summary {
+  display: inline;
+}
+
+.chart {
+  max-width: 400px;
+  max-height: 300px;
+  height: auto;
+}
